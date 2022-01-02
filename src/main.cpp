@@ -21,8 +21,8 @@ void setup()
     Serial.println("\tCould not connect to GY521");
     delay(1000);
   }
-  sensor.setAccelSensitivity(0); // 8g
-  sensor.setGyroSensitivity(0);  // 500 degrees/s
+  sensor.setAccelSensitivity(0);
+  sensor.setGyroSensitivity(0);
 
   sensor.setThrottle();
 
