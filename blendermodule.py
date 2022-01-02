@@ -1,9 +1,9 @@
 import bpy
 import time
-import serial
+import serial #using the pyserial library placed to blender/3.0/python/lib/python3.9/ or whatever your directory is for your blender install
 import math
 
-comport = '/dev/ttyUSB0'
+comport = '/dev/ttyUSB0' # com port on linux, on windows it can be 
 
 def setup():
     global ser
