@@ -27,19 +27,12 @@ void setup()
   sensor.setThrottle();
 
   // set calibration values from calibration sketch.
-  sensor.axe = -45;
-  sensor.aye = 0.047;
-  sensor.aze = -1.002;
-  sensor.gxe = -0.921;
-  sensor.gye = 2.512;
-  sensor.gze = -0.355;
-
-  // sensor.axe = -0.039;
-  // sensor.aye = -0.924;
-  // sensor.aze = -0.338;
-  // sensor.gxe = -0.924;
-  // sensor.gye = 2.688;
-  // sensor.gze = -0.411;
+  sensor.axe = -0.007;
+  sensor.aye = 0.021;
+  sensor.aze = -0.010;
+  sensor.gxe = -0.774;
+  sensor.gye = 2.583;
+  sensor.gze = -0.718;
 }
 
 void loop()
