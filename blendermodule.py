@@ -2,12 +2,13 @@ import bpy
 import time
 import serial
 import math
+import serial.tools.list_ports
 
-comport = '/dev/ttyUSB0'
+comport = [tuple(p) for p in list(serial.tools.list_ports.comports())][0][0]
 
 def setup():
     global ser
-    ser = serial.Serial(comport, '115200')
+    ser = serial.Serial(comport,115000)
     time.sleep(3)
 
 def getxrot():
