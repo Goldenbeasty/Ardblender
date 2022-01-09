@@ -33,11 +33,10 @@ bpy.app.driver_namespace['getyrot'] = getyrot
 bpy.app.driver_namespace['getzrot'] = getzrot
 
 def main():
-    # for i in range(5):
-        bpy.context.object.rotation_euler[0] = getxrot()
-        bpy.context.object.rotation_euler[1] = getyrot()
-        bpy.context.object.rotation_euler[2] = getzrot()
-        # bpy.ops.wm.redraw_timer(type='DRAW_WIN_SWAP', iterations=1) #needed if you want to see live updates
+    bpy.context.object.rotation_euler[0] = getxrot()
+    bpy.context.object.rotation_euler[1] = getyrot()
+    bpy.context.object.rotation_euler[2] = getzrot()
+    # bpy.ops.wm.redraw_timer(type='DRAW_WIN_SWAP', iterations=1) #needed if you want to see live updates
 
     # ser.close() #currently left open because I have no idea how to autostart the script
 
