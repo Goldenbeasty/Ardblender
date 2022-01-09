@@ -4,24 +4,37 @@ import serial
 import math
 import serial.tools.list_ports
 
-comport = [tuple(p) for p in list(serial.tools.list_ports.comports())][0][0]
+# comport = [tuple(p) for p in list(serial.tools.list_ports.comports())][0][0]
+
+def comscheck():
+    try:
+        if (ser.isOpen()):
+            return True
+        else:
+            setup()
+    except NameError:
+        setup()
 
 def setup():
+    comport = [tuple(p) for p in list(serial.tools.list_ports.comports())][0][0]
     global ser
     ser = serial.Serial(comport,115000)
     time.sleep(3)
 
 def getxrot():
+    comscheck()
     ser.write(b'x\n')
     xrot = math.radians(float(ser.readline()))
     return xrot
 
 def getyrot():
+    comscheck()
     ser.write(b'y\n')
     yrot = math.radians(float(ser.readline()))
     return yrot
 
 def getzrot():
+    comscheck()
     ser.write(b'z\n')
     zrot = math.radians(float(ser.readline()))
     return zrot
